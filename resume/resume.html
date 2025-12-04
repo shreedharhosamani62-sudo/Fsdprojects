@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHRIDHAR H - Resume</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-color: #00ffc8;
+      --secondary-color: #00ffc8;
+      --background-color: #0d1117;
+      --container-bg: #161b22;
+      --text-color: #c9d1d9;
+      --heading-color: #9b58ff;
+      --accent: #ffb74d;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .extracurricular {
+      background: #1f2937;
+      /* Different dark-gray-blue tone */
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.7;
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    /* Container */
+    .resume-container {
+      max-width: 1100px;
+      width: 100%;
+      background: var(--container-bg);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+      display: grid;
+      grid-template-columns: 1fr 2.5fr;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: linear-gradient(180deg, var(--secondary-color), var(--background-color));
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .profile-image {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 5px solid var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .sidebar h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+
+    .sidebar h2 {
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 2rem;
+      opacity: 0.8;
+    }
+
+    .sidebar-section {
+      text-align: left;
+      margin-bottom: 2rem;
+    }
+
+    .sidebar h3 {
+      color: var(--accent);
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info ul,
+    .skills ul,
+    .languages ul {
+      list-style: none;
+    }
+
+    .contact-info li {
+      margin-bottom: 0.75rem;
+    }
+
+    .skills li {
+      margin-bottom: 1rem;
+    }
+
+    .skill-name {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-weight: 500;
+    }
+
+    .progress-bar-container {
+      width: 100%;
+      height: 8px;
+      background: #2f3542;
+      border-radius: 4px;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    }
+
+    .languages li {
+      margin-bottom: 0.5rem;
+    }
+
+    .download-btn {
+      background: var(--primary-color);
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1.2rem;
+      border-radius: 8px;
+      width: 100%;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* Main content */
+    .main-content {
+      padding: 2.5rem;
+    }
+
+    .main-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .main-section h2 {
+      color: var(--heading-color);
+      font-size: 1.6rem;
+      border-bottom: 2px solid #30363d;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .item {
+      margin-bottom: 1.5rem;
+    }
+
+    .item h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+    }
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 0.4rem;
+    }
+
+    .company-or-institution {
+      font-weight: 500;
+      color: var(--accent);
+    }
+
+    .date {
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    .item ul {
+      list-style: disc inside;
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: 900px) {
+      .resume-container {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="resume-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <img src="https://placehold.co/160x160/0077B5/FFFFFF?text=SH" alt="Profile Picture" class="profile-image">
+      <h1>SHRIDHAR H</h1>
+      <h2>Computer Science Student</h2>
+
+      <div class="sidebar-section contact-info">
+        <h3>Contact</h3>
+        <ul>
+          <li>📞 <a href="tel:+919741033099">+91 9741033099</a></li>
+          <li>✉ <a href="mailto:shridharhosamani62@.com">shridharhosamani62@.com</a></li>
+          <li>📍 Bangalore, India</li>
+          <li>🔗 <a href="#">linkedin.com/in/shridhar</a></li>
+          <li>💻 <a href="#">github.com/shridhar</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section skills">
+        <h3>Skills</h3>
+        <ul>
+          <li><span class="skill-name">HTML</span>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 90%;"></div>
+            </div>
+          </li>
+          <li><span class="skill-name">CSS</span>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 85%;"></div>
+            </div>
+          </li>
+          <li><span class="skill-name">Python</span>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 80%;"></div>
+            </div>
+          </li>
+          <li><span class="skill-name">C Programming</span>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 75%;"></div>
+            </div>
+          </li>
+          <li><span class="skill-name">Java</span>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 70%;"></div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="sidebar-section languages">
+        <h3>Languages</h3>
+        <ul>
+          <li>English</li>
+          <li>Kannada (Native)</li>
+          <li>Hindi</li>
+        </ul>
+      </div>
+
+      <button class="download-btn" onclick="window.print()">Download as PDF</button>
+    </aside>
+
+    <!-- Main -->
+    <main class="main-content">
+      <section class="main-section">
+        <h2>Career Objective</h2>
+        <p>
+          I’m a curious and driven Computer Science student passionate about building modern, user-friendly
+          applications. My goal is to grow as a developer by solving real-world problems through clean code, thoughtful
+          design, and collaboration. I’m particularly interested in full-stack web development, UI/UX design, and
+          emerging technologies that make life easier and more connected.
+        </p>
+      </section>
+
+      <section class="main-section">
+        <h2>Education</h2>
+        <div class="item">
+          <div class="info">
+            <h3>B.Tech. in Computer Science</h3>
+            <span class="date">2024 - 2028 (Expected)</span>
+          </div>
+          <div class="company-or-institution">Dayananda Sagar University</div>
+          <ul>
+            <li><strong>First Year C-GPA:</strong> 7.00/10</li>
+            <li><strong>Relevant Coursework:</strong> Data Structures & Algorithms, Web Development, Database Systems,
+              Object-Oriented Programming, Software Engineering.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="main-section">
+        <h2>Projects</h2>
+        <div class="item">
+          <div class="info">
+            <h3>Telemedicine App for Rural Areas</h3>
+            <span class="date">SIH, 2025</span>
+          </div>
+          <ul>
+            <li>Developed a telemedicine platform to connect rural patients with doctors through secure video
+              consultations.</li>
+            <li>Added features like appointment scheduling, prescription uploads, and patient feedback.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="info">
+            <h3>TaskFlow – Project Management Tool</h3>
+            <span class="date">Personal Project, 2025</span>
+          </div>
+          <ul>
+            <li>
+              Built a web-based project management app using React and Node.js to help teams organize tasks and track
+              progress.
+            </li>
+            <li>
+              Implemented drag-and-drop task boards, real-time notifications, and user authentication.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="main-section extracurricular">
+        <h2>Extracurricular Activities</h2>
+        <div class="item">
+          <ul>
+            <li>Participated in weekly workshops.</li>
+            <li>Contributed to group discussions and knowledge sharing sessions.</li>
+            <li>Collaborated on mini-projects to apply learned concepts.</li>
+            <li>Engaged in coding challenges and hackathons to enhance problem-solving skills.</li>
+          </ul>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</body>
+
+</html>
